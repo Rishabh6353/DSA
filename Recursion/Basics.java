@@ -14,7 +14,7 @@ public class Basics {
         }
         increase(n-1);
         System.out.println(n);
-        return;
+        // return;
     }
 
     public static int factorial(int n){
