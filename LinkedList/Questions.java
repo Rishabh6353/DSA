@@ -173,6 +173,47 @@ public class Questions {
         return merge(newLeft, newRight);
     }
 
+    //Print LL in zigzag fashion
+    public void zigzag(){
+        //find mid
+        Node fast = head.next, slow= head;
+        while(fast!= null && fast.next != null){
+            fast=fast.next.next;
+            slow= slow.next;
+        }
+
+        Node mid = slow;
+        Node curr= mid.next;
+        mid.next = null;
+
+        //reversing the second part;
+        Node prev = null;
+        Node next;
+
+        while(curr!= null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        //Alternate(zigzag)
+        Node left = head;
+        Node right = prev;
+        Node nextL, nextR;
+
+        while(left!= null && right!= null){
+            nextL = left.next;
+            left.next = right;
+            nextR = right.next;
+            right.next = nextL;
+
+            //update
+            left = nextL;
+            right = nextR;
+        }
+    }
+
     public static void main(String[] args) {
         Questions list = new Questions();
         // head = new Node(1);
@@ -188,12 +229,16 @@ public class Questions {
         // System.out.println(ll.isCycle());
 
         // LinkedList<Integer> list = new LinkedList<>();
-        list.addLast(4);
-        list.addLast(3);
-        list.addLast(2);
         list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.addLast(4);
+        list.addLast(5);
         list.print();
-        list.head= list.mergeSort(list.head);
+        // list.head= list.mergeSort(list.head);
+        // list.print();
+        list.zigzag();
         list.print();
+
     }
 }
