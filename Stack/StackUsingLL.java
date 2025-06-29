@@ -1,4 +1,3 @@
-import java.util.*;
 public class StackUsingLL {
     static class Node {
         int data;
@@ -17,7 +16,7 @@ public class StackUsingLL {
             return head == null;
         }
 
-        public void push(int data) {
+        public static void push(int data) {
             Node newNode = new Node(data);
             if (isEmpty()) {
                 head = newNode;
@@ -46,7 +45,7 @@ public class StackUsingLL {
     }
 
     public static void main(String[] args) {
-        Stack s = new Stack();
+        Stacks s = new Stacks();
         //jcf implementation
         // Stack<Integer> s = new Stack<>();
         s.push(3);

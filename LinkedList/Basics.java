@@ -1,5 +1,3 @@
-
-
 public class Basics {
     public static class Node {
         int data;

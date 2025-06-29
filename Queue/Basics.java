@@ -17,7 +17,7 @@ public class Basics {
 
         public void add(int data) {
             if (rear == size - 1) {
-                System.out.println("Queue si full");
+                System.out.println("Queue is full");
             }
 
             rear += 1;

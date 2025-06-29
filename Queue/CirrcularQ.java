@@ -60,7 +60,6 @@ public class CirrcularQ {
             return arr[front];
         }
     }
-
     public static void main(String[] args) {
         Queue q = new Queue(3);
         q.add(1);
