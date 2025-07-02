@@ -16,7 +16,7 @@ public class StackUsingLL {
             return head == null;
         }
 
-        public static void push(int data) {
+        public void push(int data) {
             Node newNode = new Node(data);
             if (isEmpty()) {
                 head = newNode;
