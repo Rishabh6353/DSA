@@ -144,6 +144,51 @@ public class Basics {
 
             return isValid(root.left, min, max) && isValid(root.right, root, max);
         }
+
+        public void levelOrder(Node root) {
+            if (root == null) {
+                return;
+            }
+
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+
+            while (!q.isEmpty()) {
+                Node curr = q.remove();
+
+                if (curr == null) {
+                    if (q.isEmpty()) {
+                        break;
+                    } else {
+                        q.add(null);
+                    }
+                } else {
+                    System.out.print(curr.data + " ");
+
+                    if(curr.left != null){
+                        q.add(curr.left);
+                    }
+                    if(curr.right != null){
+                        q.add(curr.right);
+                    }
+                }
+            }
+        }
+
+        public Node mirror(Node root) {
+            if (root == null) {
+                return null;
+            }
+
+            Node leftS = mirror(root.left);
+            Node rightS = mirror(root.right);
+
+            root.left = rightS;
+            root.right = leftS;
+
+            return root;
+        }
     }
 
     public static void main(String[] args) {
@@ -160,6 +205,8 @@ public class Basics {
         // t.delete(root, 10);
         // t.inorder(root);
         // t.printRange(root, 1, 8);
-        System.out.println(t.isValid(root, null, null));
+        // System.out.println(t.isValid(root, null, null));
+        t.mirror(root);
+        t.levelOrder(root);
     }
 }
