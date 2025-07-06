@@ -142,7 +142,7 @@ public class Basics {
                 return false;
             }
 
-            return isValid(root.left, min, max) && isValid(root.right, root, max);
+            return isValid(root.left, min, root) && isValid(root.right, root, max);
         }
 
         public void levelOrder(Node root) {
@@ -166,10 +166,10 @@ public class Basics {
                 } else {
                     System.out.print(curr.data + " ");
 
-                    if(curr.left != null){
+                    if (curr.left != null) {
                         q.add(curr.left);
                     }
-                    if(curr.right != null){
+                    if (curr.right != null) {
                         q.add(curr.right);
                     }
                 }

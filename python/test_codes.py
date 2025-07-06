@@ -91,19 +91,19 @@ import time
 
 #     return list(codes)
 
-def generate_structured_codes(limit=100):
-    prefix = "SUNCOIN200"
-    # suffix = "525"
-    codes = set()
+# def generate_structured_codes(limit=100):
+#     prefix = "SUNCOIN200"
+#     # suffix = "525"
+#     codes = set()
 
-    while len(codes) < limit:
-        part1 = random.choice(string.ascii_uppercase)  # Random letter
-        part2 = random.choice(string.ascii_uppercase)  # Random letter
-        part3 = random.choice(string.ascii_uppercase)  # Random letter
+#     while len(codes) < limit:
+#         part1 = random.choice(string.ascii_uppercase)  # Random letter
+#         part2 = random.choice(string.ascii_uppercase)  # Random letter
+#         part3 = random.choice(string.ascii_uppercase)  # Random letter
 
-        code = f"{prefix}{part1}{part2}{part3}"
-        codes.add(code)
-    return list(codes)
+#         code = f"{prefix}{part1}{part2}{part3}"
+#         codes.add(code)
+#     return list(codes)
 
 
 
