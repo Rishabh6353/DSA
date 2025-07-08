@@ -1,8 +1,4 @@
-
-import java.util.TreeMap;
-
-
-
+import java.util.*;
 public class Basics {
     public static void main(String[] args) {
         // HashMap<String, Integer> hm = new HashMap<>();
@@ -45,10 +41,42 @@ public class Basics {
 
 
         //TreeMap - key based sorting and implmeneted using Red black trees which are self balancing
-        TreeMap<String,Integer> tm = new TreeMap<>();
-        tm.put("India", 50);
-        tm.put("China", 150);
-        tm.put("Nepal", 5);
-        System.out.println(tm);
+        // TreeMap<String,Integer> tm = new TreeMap<>();
+        // tm.put("India", 50);
+        // tm.put("China", 150);
+        // tm.put("Nepal", 5);
+        // System.out.println(tm);
+
+
+        //HashSet - implemented ussing hashmap , only unique keys, null is allowed, unordered.
+        // HashSet<Integer> hs = new HashSet<>();
+        // hs.add(1);
+        // hs.add(2);
+        // hs.add(3);
+        // hs.add(2);
+        // System.out.println(hs);
+
+        // if(hs.contains(3)) System.out.println("True");
+        // else System.out.println("false");
+
+        // //using iterator to print
+        // Iterator<Integer> i = hs.iterator();
+        // while (i.hasNext()) { 
+        //     System.out.print(i.next()+" ");
+        // }
+
+        // //using enhanced loop to print
+        // for(Integer key: hs){
+        //     System.out.println(key);
+        // }
+
+
+        //Linked HashSet - ordered elements
+        LinkedHashSet<Integer> lhs = new LinkedHashSet<>();
+        lhs.add(1);
+        lhs.add(2);
+        lhs.add(3);
+        lhs.add(2);
+        System.out.println(lhs);
     }
 }
