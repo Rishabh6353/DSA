@@ -143,7 +143,7 @@ public class Graphs3 {
 
                     if(dist[u]+ wt < dist[v]){
                         dist[v] = dist[u]+ wt;
-                        pq.add(new Pair(v, dist[u]));
+                        pq.add(new Pair(v, dist[v]));
                     }
                 }
             }
